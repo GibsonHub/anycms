@@ -41,6 +41,7 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Components
 import { EmailMeComponent } from './components/email-me/email-me.component';
+import { AppUtils } from './app.utils';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
     AlertService,
     AuthGuardService,
     AuthService,
-    WindowService
+    WindowService,
+    AppUtils
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -1,5 +1,8 @@
 export const tenants = {
     'default': {
-        databasePrefix: 'def_'
+        databasePrefix: 'dev_'
+    },
+    'localhost': {
+        databasePrefix: 'dev_'
     }
 };

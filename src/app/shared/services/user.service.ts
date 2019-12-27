@@ -56,6 +56,7 @@ export class UserService {
   }
 
   public getUserProfileInformation(): void {
+
     const user = firebase.auth().currentUser;
     let name, email, photoUrl, uid, emailVerified;
 
@@ -66,6 +67,7 @@ export class UserService {
       emailVerified = user.emailVerified;
       uid = user.uid;
     }
+    console.log('getUserProfileInformation()', user);
   }
 
   public verificationUserEmail(): Promise<void> {
