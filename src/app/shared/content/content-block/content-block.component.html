@@ -1,0 +1,6 @@
+
+
+<app-content-material-card class="content-material-card" *ngIf="content && content.body != ''" [contentBlock]="content" [title]="content.title" [subTitle]="content.subTitle" [body]="content.body" [image]="content.image"></app-content-material-card>
+<div class="content-slug-not-found" *ngIf="!content || !content.body || content.body == ''">
+  <div class="content-block content-block-{{slug}}"></div>
+</div>

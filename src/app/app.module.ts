@@ -42,6 +42,11 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 // Components
 import { EmailMeComponent } from './components/email-me/email-me.component';
 import { AppUtils } from './app.utils';
+import { ContentBlockComponent } from './shared/content/content-block/content-block.component';
+import { ContentMaterialCardComponent } from './views/content-material-card/content-material-card.component';
+import { ContentDialogComponent } from './views/content-dialog/content-dialog.component';
+import { ContentBlockEditComponent } from './shared/content/content-block-edit/content-block-edit.component';
+import { QuillModule } from 'ngx-quill';
 
 @NgModule({
   declarations: [
@@ -52,7 +57,11 @@ import { AppUtils } from './app.utils';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    EmailMeComponent
+    EmailMeComponent,
+    ContentBlockComponent,
+    ContentMaterialCardComponent,
+    ContentDialogComponent,
+    ContentBlockEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +79,8 @@ import { AppUtils } from './app.utils';
     BackgroundsModule,
     ProfileModule,
     MiscModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseKeys)
+    NgxAuthFirebaseUIModule.forRoot(firebaseKeys),
+    QuillModule.forRoot()
   ],
   providers: [
     UserService,
@@ -83,6 +93,7 @@ import { AppUtils } from './app.utils';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
+  entryComponents: [ContentDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

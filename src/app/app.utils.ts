@@ -7,7 +7,7 @@ export class AppUtils{
     constructor(){
         const hn = window.location.hostname + '';
         this.host = hn;
-        console.log('UTILS: ', this.host, tenants.tenants[this.host]);
+        //console.log('UTILS: ', this.host, tenants.tenants[this.host]);
         this.tablePrefix = tenants.tenants[this.host].databasePrefix;
         console.log('GlobalTablePrefix: ' + this.tablePrefix);
     }

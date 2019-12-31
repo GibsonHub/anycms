@@ -1,0 +1,22 @@
+<span class="content-spanner">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        {{title}}
+        <button mat-button (click)="openDialog()">Edit</button>
+      </mat-card-title>
+      <mat-card-subtitle>{{subTitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{image}}" alt="{{title}}">
+    <mat-card-content>
+      <p>
+        {{body}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</span>

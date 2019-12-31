@@ -1,0 +1,58 @@
+<div id="content-block">
+  <mat-card>
+    <h1>Content Block Edit</h1>
+      <form class="form" #c="ngForm" >
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Content Slug" id="slug" name="slug" [(ngModel)]="slug" required>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Title" id="title" name="title" [(ngModel)]="title" required >
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Sub Title" id="subTitle" name="subTitle" [(ngModel)]="subTitle" required>
+      </mat-form-field>
+
+      <table class="full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="full-width">
+          <input matInput placeholder="Element Type" id="elementType" name="elementType" [(ngModel)]="elementType" required>
+        </mat-form-field></td>
+        <td><mat-form-field class="full-width">
+          <input matInput placeholder="Edit Component" id="editComponent" name="editComponent" [(ngModel)]="editComponent" required>
+        </mat-form-field></td>
+        <td><mat-form-field class="full-width">
+          <input matInput placeholder="View Component" id="viewComponent" name="viewComponent" [(ngModel)]="viewComponent" required>
+        </mat-form-field></td>
+      </tr></table>
+
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Image" id="image" name="image" [(ngModel)]="image" required>
+      </mat-form-field>
+
+      <!-- <p>
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Address" value="Streetname 12a" id="address" name="address" ngModel required></textarea>
+        </mat-form-field>
+      </p> -->
+
+      <!-- <table class="full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="full-width">
+          <input matInput placeholder="City" id="city" name="city" ngModel required>
+        </mat-form-field></td>
+        <td><mat-form-field class="full-width">
+          <input matInput #postalCode maxlength="6" id="postal" name="postal" placeholder="Zip Code" value="2900TY" ngModel required>
+          <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+        </mat-form-field></td>
+      </tr></table>       -->
+      <p>
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Content Body" id="body" name="body" [(ngModel)]="body" required></textarea>
+        </mat-form-field>
+      </p>
+      <quill-editor></quill-editor>
+      <br />
+      <button mat-raised-button type="submit" [disabled]="c.invalid">Submit</button>
+      <button mat-raised-button (click)="saveBlock()" >Save</button>
+
+    </form>
+  </mat-card>
+</div>
